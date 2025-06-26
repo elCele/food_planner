@@ -1,0 +1,97 @@
+{
+    "colazione": {
+        "bere": [
+            "🍃 The",
+            "🥛 Latte (150ml)",
+            "🍶 Yogurt (125g)"
+        ],
+        "mangiare": [
+            "🍞 Fette di pane (2) + marmellata",
+            "🍞 Fette di pane (2) + crema al cioccolato",
+            "🥞 Pancakes (2) + marmellata",
+            "🥞 Pancakes (2) + burro d'arachidi",
+            "🥞 Pancakes (2) + crema al cioccolato",
+            "🍰 Fetta di torta",
+            "🥣 Cucchiai di muesli (4)",
+            "🥪🥑 Panino con avocado",
+            "🥪🧀 Panino con formaggio spalmabile",
+            "🥪🥓 Panino con affettato"
+        ]
+    },
+    "merenda_mattina": [
+        "🍇 Frutto di stagione",
+        "🥜 Frutta secca (30g)"
+    ],
+    "pranzo": {
+        "cereali": [
+            "🥔 Patate (350g)",
+            "🥖 Pane (120g)",
+            "🍝 Pasta (110g)",
+            "🍚 Riso (110g)",
+            "🍚 Orzo (110g)",
+            "🍚 Farro (110g)",
+            "🫓 Wasa (70g)",
+            "🥖 Grissini (70g)"
+        ],
+        "proteine": [
+            "🐮 Carne rossa (200g)",
+            "🐔 Carne bianca (200g)",
+            "🐟 Pesce fresco (250g)",
+            "🛢️ Pesce conservato (120g)",
+            "🫘 Legumi (80g)",
+            "🥚 Uova (2)",
+            "🧀 Formaggio fresco (150g)",
+            "🥓 Affettati (100g)"
+        ],
+        "verdure": [
+            "🥒 Zucchine",
+            "🥬 Spinaci",
+            "🥕 Carote",
+            "🥦 Broccoli",
+            "🫑 Peperoni",
+            "🥗 Insalata",
+            "🥒 Cetrioli",
+            "🍅 Pomodori",
+            "🍆 Melanzana"
+        ]
+    },
+    "merenda_pomeriggio": [
+        "🍇🥜 Frutta + frutta secca",
+        "🍇🫓 Frutta + Cracker integrali",
+        "🍇🫓 Frutta + gallette di riso con cioccolato (3)",
+        "🥖🍌 Pane segale + banana + yogurt + burro di arachidi"
+    ],
+    "cena": {
+        "cereali": [
+            "🥔 Patate (350g)",
+            "🥖 Pane (120g)",
+            "🍝 Pasta (110g)",
+            "🍚 Riso (110g)",
+            "🍚 Orzo (110g)",
+            "🍚 Farro (110g)",
+            "🫓 Wasa (70g)",
+            "🥖 Grissini (70g)"
+        ],
+        "proteine": [
+            "🐮 Carne rossa (200g)",
+            "🐔 Carne bianca (200g)",
+            "🐟 Pesce fresco (250g)",
+            "🛢️ Pesce conservato (120g)",
+            "🫘 Legumi (80g)",
+            "🥚 Uova (2)",
+            "🧀 Formaggio fresco (150g)",
+            "🥓 Affettati (100g)"
+        ],
+        "verdure": [
+            "🥒 Zucchine",
+            "🥬 Spinaci",
+            "🥕 Carote",
+            "🥦 Broccoli",
+            "🫑 Peperoni",
+            "🥗 Insalata",
+            "🥒 Cetrioli",
+            "🍅 Pomodori",
+            "🍆 Melanzana"
+        ]
+    }
+}
