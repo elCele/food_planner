@@ -4,8 +4,7 @@ import os
 
 st.set_page_config(
     page_title="Lista della spesa",
-    layout="wide",
-    initial_sidebar_state="expanded"
+    layout="wide"
 )
 
 PIANO_FILE = "data/piano.json"
