@@ -50,13 +50,13 @@ Ogni giorno include:
 
 - Colazione → una bevanda + un alimento solido
 
-    - Merenda mattina → uno snack
+- Merenda mattina → uno snack
 
-    - Pranzo → cereale + proteina + verdura
+- Pranzo → cereale + proteina + verdura
 
-    - Merenda pomeriggio → uno snack
+- Merenda pomeriggio → uno snack
 
-    - Cena → cereale + proteina + verdura
+- Cena → cereale + proteina + verdura
 
 Le proteine sono soggette a limiti settimanali per garantire varietà e bilanciamento nutrizionale.
 
