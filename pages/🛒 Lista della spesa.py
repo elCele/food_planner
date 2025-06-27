@@ -2,14 +2,18 @@ import streamlit as st
 import json
 import os
 
-st.set_page_config(page_title = "Lista della spesa", layout = "wide", initial_sidebar_state = "expanded")
+st.set_page_config(
+    page_title = "Lista della spesa",
+    layout = "wide",
+    initial_sidebar_state = "expanded"
+)
 
 PIANO_FILE = "data/piano.json"
 giorni = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"]
 
 def carica_piano():
     if os.path.exists(PIANO_FILE):
-        with open(PIANO_FILE, encoding="utf-8") as f:
+        with open(PIANO_FILE, encoding = "utf-8") as f:
             return json.load(f)
     return None
 
