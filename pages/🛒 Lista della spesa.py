@@ -1,7 +1,6 @@
 import streamlit as st
 import json
 import os
-import re
 
 st.set_page_config(
     page_title="Lista della spesa",
@@ -10,9 +9,10 @@ st.set_page_config(
 )
 
 PIANO_FILE = "data/piano.json"
+CHECK_FILE = "data/check_spesa.json"
+
 giorni = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"]
 
-# Definisci le categorie di spesa e le parole chiave per riconoscere gli alimenti
 CATEGORIE_SPESA = {
     "Frutta": [
         "frutto di stagione", "banana", "mela", "arancia", "🍇", "🍎", "🍌", "🍊", "frutta", "frutta secca"
@@ -41,7 +41,6 @@ CATEGORIE_SPESA = {
     "Dolci e Creme": [
         "marmellata", "crema al cioccolato", "torta", "burro"
     ],
-    # aggiungi altre categorie se vuoi
 }
 
 def carica_piano():
@@ -50,23 +49,20 @@ def carica_piano():
             return json.load(f)
     return None
 
-def normalizza_testo(testo):
-    # minuscolo e senza emoji (rimuove tutto tranne lettere, numeri, spazi e alcuni caratteri)
-    testo = testo.lower()
-    testo = re.sub(r"[^\w\s]", "", testo)
-    return testo
+def carica_check():
+    if os.path.exists(CHECK_FILE):
+        with open(CHECK_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
 
-def assegna_categoria(alimento):
-    alimento_norm = normalizza_testo(alimento)
-    for categoria, parole_chiave in CATEGORIE_SPESA.items():
-        for chiave in parole_chiave:
-            if chiave in alimento_norm:
-                return categoria
-    return "Altro"
+def salva_check(data):
+    with open(CHECK_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
-def estrai_alimenti(piano):
-    alimenti = set()
+def estrai_lista_spesa(piano):
+    lista_spesa = set()
     piano_giorni = piano.get("piano", {})
+
     for giorno in giorni:
         pasti_giorno = piano_giorni.get(giorno, {})
         if not pasti_giorno:
@@ -76,72 +72,77 @@ def estrai_alimenti(piano):
         colazione = pasti_giorno.get("colazione", {})
         if colazione:
             if colazione.get("bere"):
-                alimenti.add(colazione["bere"])
+                lista_spesa.add(colazione["bere"])
             if colazione.get("mangiare"):
-                alimenti.add(colazione["mangiare"])
+                lista_spesa.add(colazione["mangiare"])
 
         # Merenda mattina
         if pasti_giorno.get("merenda_mattina"):
-            alimenti.add(pasti_giorno["merenda_mattina"])
+            lista_spesa.add(pasti_giorno["merenda_mattina"])
 
         # Pranzo
         pranzo = pasti_giorno.get("pranzo", {})
         if pranzo:
             if pranzo.get("cereale"):
-                alimenti.add(pranzo["cereale"])
+                lista_spesa.add(pranzo["cereale"])
             if pranzo.get("proteina"):
-                alimenti.add(pranzo["proteina"])
+                lista_spesa.add(pranzo["proteina"])
             if pranzo.get("verdura"):
-                alimenti.add(pranzo["verdura"])
+                lista_spesa.add(pranzo["verdura"])
 
         # Merenda pomeriggio
         if pasti_giorno.get("merenda_pomeriggio"):
-            alimenti.add(pasti_giorno["merenda_pomeriggio"])
+            lista_spesa.add(pasti_giorno["merenda_pomeriggio"])
 
         # Cena
         cena = pasti_giorno.get("cena", {})
         if cena:
             if cena.get("cereale"):
-                alimenti.add(cena["cereale"])
+                lista_spesa.add(cena["cereale"])
             if cena.get("proteina"):
-                alimenti.add(cena["proteina"])
+                lista_spesa.add(cena["proteina"])
             if cena.get("verdura"):
-                alimenti.add(cena["verdura"])
+                lista_spesa.add(cena["verdura"])
 
-    # Rimuovi eventuali vuoti
-    return {item for item in alimenti if item}
+    # Rimuovo eventuali valori vuoti o None, splittando i valori concatenati con +
+    lista_spesa = {item for voce in lista_spesa if voce for item in voce.split("+")}
+    lista_spesa = {item.strip() for item in lista_spesa if item.strip()}
+    return sorted(lista_spesa)
 
-def suddividi_per_categoria(alimenti):
-    cat_dict = {}
-    for alimento in alimenti:
-        # Per gli alimenti che contengono '+', spezza e assegna categoria a ciascuno
-        parti = [parte.strip() for parte in re.split(r"\+", alimento)]
-        for parte in parti:
-            categoria = assegna_categoria(parte)
-            if categoria not in cat_dict:
-                cat_dict[categoria] = set()
-            cat_dict[categoria].add(parte)
-    # Ordina i set in liste ordinate
-    for c in cat_dict:
-        cat_dict[c] = sorted(cat_dict[c])
-    return cat_dict
+def assegna_categoria(item):
+    item_lower = item.lower()
+    for categoria, parole_chiave in CATEGORIE_SPESA.items():
+        for parola in parole_chiave:
+            if parola in item_lower:
+                return categoria
+    return "Altro"
 
-st.title("🛒 Lista della spesa per categorie")
+st.title("🛒 Lista della spesa")
 
 piano_salvato = carica_piano()
+check_salvati = carica_check()
 
 if piano_salvato:
-    alimenti = estrai_alimenti(piano_salvato)
-    lista_categorica = suddividi_per_categoria(alimenti)
+    lista_spesa = estrai_lista_spesa(piano_salvato)
 
-    st.write(f"Lista alimenti unica generata dal piano settimanale: {len(alimenti)} elementi")
+    # Organizza per categoria
+    categorie = {}
+    for alimento in lista_spesa:
+        categoria = assegna_categoria(alimento)
+        categorie.setdefault(categoria, []).append(alimento)
 
-    for categoria, items in lista_categorica.items():
-        with st.expander(f"🛍️ {categoria} ({len(items)})", expanded=True):
-            for alimento in items:
+    st.write(f"Lista alimenti unica generata dal piano settimanale: {len(lista_spesa)}")
+
+    for categoria in sorted(categorie.keys()):
+        with st.expander(f"🧺 {categoria}", expanded=True):
+            for alimento in sorted(categorie[categoria]):
                 key = f"{categoria}_{alimento}"
-                checked = st.checkbox(alimento, key=key)
-                if checked:
-                    st.markdown(f"~~{alimento}~~")
+                is_checked = check_salvati.get(key, False)
+
+                checked = st.checkbox(alimento, key=key, value=is_checked)
+
+                if checked != is_checked:
+                    check_salvati[key] = checked
+                    salva_check(check_salvati)
 else:
     st.warning("Nessun piano settimanale salvato. Genera prima un piano con l'altra app.")
