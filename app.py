@@ -3,7 +3,7 @@ import json
 import random
 import os
 
-st.set_page_config(layout="wide")
+st.set_page_config(page_title = "Generatore piano alimentare", layout = "wide", initial_sidebar_state = "expanded")
 
 # Carica dati pasti
 with open("data/pasti.json", encoding="utf-8") as f:
