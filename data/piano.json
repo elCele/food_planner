@@ -3,127 +3,127 @@
     "Lunedì": {
       "colazione": {
         "bere": "🍶 Yogurt (125g)",
-        "mangiare": "🍞 Fette di pane (2) + marmellata"
+        "mangiare": "🍞 Fette di pane (2) + crema al cioccolato"
       },
       "merenda_mattina": "🍇 Frutto di stagione",
       "pranzo": {
-        "cereale": "🍚 Orzo (110g)",
-        "proteina": "🐔 Carne bianca (200g)",
-        "verdura": "🥒 Zucchine"
+        "cereale": "🍚 Farro (110g)",
+        "proteina": "🛢️ Pesce conservato (120g)",
+        "verdura": "🥒 Cetrioli"
       },
       "merenda_pomeriggio": "🍇🫓 Frutta + Cracker integrali",
       "cena": {
-        "cereale": "🥖 Grissini (50g)",
-        "proteina": "🛢️ Pesce conservato (120g)",
-        "verdura": "🥒 Zucchine"
+        "cereale": "🫓 Wasa (60g)",
+        "proteina": "🐮 Carne rossa (200g)",
+        "verdura": "🥬 Spinaci"
       }
     },
     "Martedì": {
       "colazione": {
-        "bere": "🍃 The",
-        "mangiare": "🥞 Pancakes (2) + crema al cioccolato"
-      },
-      "merenda_mattina": "🍇 Frutto di stagione",
-      "pranzo": {
-        "cereale": "🫓 Wasa (70g)",
-        "proteina": "🫘 Legumi (80g)",
-        "verdura": "🫑 Peperoni"
-      },
-      "merenda_pomeriggio": "🥖🍌 Pane segale + banana + yogurt + burro di arachidi",
-      "cena": {
-        "cereale": "🥔 Patate (300g)",
-        "proteina": "🐟 Pesce fresco (250g)",
-        "verdura": "🥒 Zucchine"
-      }
-    },
-    "Mercoledì": {
-      "colazione": {
-        "bere": "🍃 The",
-        "mangiare": "🥞 Pancakes (2) + crema al cioccolato"
-      },
-      "merenda_mattina": "🥜 Frutta secca (30g)",
-      "pranzo": {
-        "cereale": "🫓 Wasa (70g)",
-        "proteina": "🐮 Carne rossa (200g)",
-        "verdura": "🥒 Zucchine"
-      },
-      "merenda_pomeriggio": "🍇🫓 Frutta + gallette di riso con cioccolato (3)",
-      "cena": {
-        "cereale": "🥔 Patate (300g)",
-        "proteina": "🐟 Pesce fresco (250g)",
-        "verdura": "🥒 Cetrioli"
-      }
-    },
-    "Giovedì": {
-      "colazione": {
         "bere": "🥛 Latte (150ml)",
-        "mangiare": "🍞 Fette di pane (2) + marmellata"
-      },
-      "merenda_mattina": "🥜 Frutta secca (30g)",
-      "pranzo": {
-        "cereale": "🍝 Pasta (110g)",
-        "proteina": "🥓 Affettati (100g)",
-        "verdura": "🥕 Carote"
-      },
-      "merenda_pomeriggio": "🍇🫓 Frutta + Cracker integrali",
-      "cena": {
-        "cereale": "🥖 Grissini (50g)",
-        "proteina": "🫘 Legumi (80g)",
-        "verdura": "🥒 Zucchine"
-      }
-    },
-    "Venerdì": {
-      "colazione": {
-        "bere": "🍃 The",
         "mangiare": "🥞 Pancakes (2) + marmellata"
       },
       "merenda_mattina": "🥜 Frutta secca (30g)",
       "pranzo": {
-        "cereale": "🍝 Pasta (110g)",
+        "cereale": "🍚 Orzo (110g)",
         "proteina": "🧀 Formaggio fresco (150g)",
+        "verdura": "🥬 Spinaci"
+      },
+      "merenda_pomeriggio": "🍇🫓 Frutta + Cracker integrali",
+      "cena": {
+        "cereale": "🍝 Pasta (90g)",
+        "proteina": "🫘 Legumi (80g)",
         "verdura": "🥒 Cetrioli"
+      }
+    },
+    "Mercoledì": {
+      "colazione": {
+        "bere": "🍶 Yogurt (125g)",
+        "mangiare": "🍞 Fette di pane (2) + crema al cioccolato"
+      },
+      "merenda_mattina": "🥜 Frutta secca (30g)",
+      "pranzo": {
+        "cereale": "🥖 Grissini (70g)",
+        "proteina": "🫘 Legumi (80g)",
+        "verdura": "🥦 Broccoli"
+      },
+      "merenda_pomeriggio": "🥖🍌 Pane segale + banana + yogurt + burro di arachidi",
+      "cena": {
+        "cereale": "🥖 Grissini (50g)",
+        "proteina": "🐔 Carne bianca (200g)",
+        "verdura": "🥕 Carote"
+      }
+    },
+    "Giovedì": {
+      "colazione": {
+        "bere": "🍃 The",
+        "mangiare": "🥞 Pancakes (2) + burro d'arachidi"
+      },
+      "merenda_mattina": "🍇 Frutto di stagione",
+      "pranzo": {
+        "cereale": "🍚 Riso (110g)",
+        "proteina": "🥚 Uova (2)",
+        "verdura": "🥬 Spinaci"
+      },
+      "merenda_pomeriggio": "🍇🫓 Frutta + gallette di riso con cioccolato (3)",
+      "cena": {
+        "cereale": "🫓 Wasa (60g)",
+        "proteina": "🐟 Pesce fresco (250g)",
+        "verdura": "🍆 Melanzana"
+      }
+    },
+    "Venerdì": {
+      "colazione": {
+        "bere": "🍶 Yogurt (125g)",
+        "mangiare": "🥪🥑 Panino con avocado"
+      },
+      "merenda_mattina": "🍇 Frutto di stagione",
+      "pranzo": {
+        "cereale": "🥔 Patate (350g)",
+        "proteina": "🥓 Affettati (100g)",
+        "verdura": "🥕 Carote"
       },
       "merenda_pomeriggio": "🍇🥜 Frutta + frutta secca",
       "cena": {
-        "cereale": "🥖 Pane (80g)",
+        "cereale": "🍚 Farro (90g)",
         "proteina": "🧀 Formaggio fresco (150g)",
-        "verdura": "🍆 Melanzana"
+        "verdura": "🥦 Broccoli"
       }
     },
     "Sabato": {
       "colazione": {
         "bere": "🍃 The",
-        "mangiare": "🥣 Cucchiai di muesli (4)"
+        "mangiare": "🥪🧀 Panino con formaggio spalmabile"
       },
-      "merenda_mattina": "🍇 Frutto di stagione",
+      "merenda_mattina": "🥜 Frutta secca (30g)",
       "pranzo": {
-        "cereale": "🥖 Pane (120g)",
-        "proteina": "🐔 Carne bianca (200g)",
-        "verdura": "🥦 Broccoli"
+        "cereale": "🍚 Farro (110g)",
+        "proteina": "🥚 Uova (2)",
+        "verdura": "🥕 Carote"
       },
       "merenda_pomeriggio": "🥖🍌 Pane segale + banana + yogurt + burro di arachidi",
       "cena": {
-        "cereale": "🍚 Orzo (90g)",
-        "proteina": "🥚 Uova (2)",
-        "verdura": "🍅 Pomodori"
+        "cereale": "🍝 Pasta (90g)",
+        "proteina": "🐟 Pesce fresco (250g)",
+        "verdura": "🥬 Spinaci"
       }
     },
     "Domenica": {
       "colazione": {
-        "bere": "🥛 Latte (150ml)",
-        "mangiare": "🥞 Pancakes (2) + crema al cioccolato"
+        "bere": "🍃 The",
+        "mangiare": "🥞 Pancakes (2) + burro d'arachidi"
       },
       "merenda_mattina": "🥜 Frutta secca (30g)",
       "pranzo": {
-        "cereale": "🍚 Orzo (110g)",
-        "proteina": "🥚 Uova (2)",
-        "verdura": "🥦 Broccoli"
+        "cereale": "🍝 Pasta (110g)",
+        "proteina": "🐔 Carne bianca (200g)",
+        "verdura": "🥒 Cetrioli"
       },
-      "merenda_pomeriggio": "🍇🫓 Frutta + Cracker integrali",
+      "merenda_pomeriggio": "🍇🥜 Frutta + frutta secca",
       "cena": {
-        "cereale": "🥖 Pane (80g)",
-        "proteina": "🐟 Pesce fresco (250g)",
-        "verdura": "🥕 Carote"
+        "cereale": "🥔 Patate (300g)",
+        "proteina": "🧀 Formaggio fresco (150g)",
+        "verdura": "🫑 Peperoni"
       }
     }
   },
